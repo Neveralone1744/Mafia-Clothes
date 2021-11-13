@@ -532,11 +532,15 @@
 	icon_state = "bandagedress"
 	item_state = "bandagedress"
 
-/obj/item/clothing/under/f13/classdress
+/obj/item/clothing/under/f13/classdress/mafia
 	name = "classy dress"
-	desc = "A dress that shows off all of your assets in the best ways, while remaining quite formal and tasteful."
+	desc = "A dress that is functional, while remaining quite formal and tasteful."
 	icon_state = "societydress"
 	item_state = "societydress"
+	armor = list("tier" = 2,  "bomb" = 20, "bio" = 0, "rad" = 0, "acid" = 0)
+/obj/item/clothing/suit/armor/f13/classdress/mafia/Initialize()
+    . = ..()
+    AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/under/f13/bluedress
 	name = "blue dress"
@@ -1190,12 +1194,16 @@
 	item_state = "syndicate-green"
 	item_color = "villain"
 
-/obj/item/clothing/under/f13/gentlesuit
+/obj/item/clothing/under/f13/gentlesuit/mafia
 	name = "gentlemans suit"
-	desc = "A silk black shirt with a white tie and a matching gray vest and slacks. Feels proper."
+	desc = "The mafia never gives up on style even with protection."
 	icon_state = "gentlesuit"
 	item_state = "gy_suit"
 	item_color = "gentlesuit"
+	armor = list("tier" = 2,  "bomb" = 20, "bio" = 0, "rad" = 0, "acid" = 0)
+/obj/item/clothing/suit/armor/f13/gentlesuit/mafia//obj/item/clothing/suit/armor/f13/classdress/mafia Initialize()
+    . = ..()
+    AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/under/f13/detectivealt
 	name = "fancy detective suit"
